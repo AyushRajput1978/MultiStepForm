@@ -1,0 +1,14 @@
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 20px;
+    border: 2px solid #4570b0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-file-upload span {
+    margin-right: 10px;
+  }
+  
