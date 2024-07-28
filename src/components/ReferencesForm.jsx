@@ -105,14 +105,14 @@ const ReferencesForm = ({ formData, setFormData, onNext, onPrevious }) => {
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId={`reference${index}FullName`}>
-                                <Form.Label>Full Name</Form.Label>
+                                <Form.Label className='fw-500'>Full Name</Form.Label>
                                 <Form.Control type="text" name={`${index}.fullName`} value={reference.fullName} onChange={handleChange} />
                                 {errors[`${index}.fullName`] && <span className="text-danger">{errors[`${index}.fullName`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId={`reference${index}Relation`}>
-                                <Form.Label>Relation</Form.Label>
+                                <Form.Label className='fw-500'>Relation</Form.Label>
                                 <Form.Control type="text" name={`${index}.relation`} value={reference.relation} onChange={handleChange} />
                                 {errors[`${index}.relation`] && <span className="text-danger">{errors[`${index}.relation`]}</span>}
                             </Form.Group>
@@ -121,38 +121,38 @@ const ReferencesForm = ({ formData, setFormData, onNext, onPrevious }) => {
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId={`reference${index}PhoneNo`}>
-                                <Form.Label>Mobile Number</Form.Label>
+                                <Form.Label className='fw-500'>Mobile Number</Form.Label>
                                 <Form.Control type="text" name={`${index}.phoneNo`} value={reference.phoneNo} onChange={handleChange} />
                                 {errors[`${index}.phoneNo`] && <span className="text-danger">{errors[`${index}.phoneNo`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId={`reference${index}Email`}>
-                                <Form.Label>Email</Form.Label>
+                                <Form.Label className='fw-500'>Email</Form.Label>
                                 <Form.Control type="email" name={`${index}.email`} value={reference.email} onChange={handleChange} />
                                 {errors[`${index}.email`] && <span className="text-danger">{errors[`${index}.email`]}</span>}
                             </Form.Group>
                         </Col>
                     </Row>
-                    <h5>Current Address</h5>
+                    <h5 className='mt-3'>Current Address</h5>
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId={`reference${index}Street`}>
-                                <Form.Label>Street</Form.Label>
+                                <Form.Label className='fw-500'>Street</Form.Label>
                                 <Form.Control type="text" name="street" value={reference.currentAddress.street} onChange={(e) => handleAddressChange(e, index, 'currentAddress')} />
                                 {errors[`${index}.currentAddress.street`] && <span className="text-danger">{errors[`${index}.currentAddress.street`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={3}>
                             <Form.Group controlId={`reference${index}Locality`}>
-                                <Form.Label>Locality</Form.Label>
+                                <Form.Label className='fw-500'>Locality</Form.Label>
                                 <Form.Control type="text" name="locality" value={reference.currentAddress.locality} onChange={(e) => handleAddressChange(e, index, 'currentAddress')} />
                                 {errors[`${index}.currentAddress.locality`] && <span className="text-danger">{errors[`${index}.currentAddress.locality`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={3}>
                             <Form.Group controlId={`reference${index}Pin`}>
-                                <Form.Label>PIN</Form.Label>
+                                <Form.Label className='fw-500'>PIN</Form.Label>
                                 <Form.Control type="text" name="pin" value={reference.currentAddress.pin} onChange={(e) => handleAddressChange(e, index, 'currentAddress')} />
                                 {errors[`${index}.currentAddress.pin`] && <span className="text-danger">{errors[`${index}.currentAddress.pin`]}</span>}
                             </Form.Group>
@@ -161,14 +161,14 @@ const ReferencesForm = ({ formData, setFormData, onNext, onPrevious }) => {
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId={`reference${index}State`}>
-                                <Form.Label>State</Form.Label>
+                                <Form.Label className='fw-500'>State</Form.Label>
                                 <Form.Control type="text" name="state" value={reference.currentAddress.state} onChange={(e) => handleAddressChange(e, index, 'currentAddress')} />
                                 {errors[`${index}.currentAddress.state`] && <span className="text-danger">{errors[`${index}.currentAddress.state`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId={`reference${index}District`}>
-                                <Form.Label>District</Form.Label>
+                                <Form.Label className='fw-500'>District</Form.Label>
                                 <Form.Control type="text" name="district" value={reference.currentAddress.district} onChange={(e) => handleAddressChange(e, index, 'currentAddress')} />
                                 {errors[`${index}.currentAddress.district`] && <span className="text-danger">{errors[`${index}.currentAddress.district`]}</span>}
                             </Form.Group>

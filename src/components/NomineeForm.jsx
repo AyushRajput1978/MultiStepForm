@@ -67,18 +67,18 @@ const NomineeForm = ({ formData, setFormData, onNext, onPrevious }) => {
         <Form>
             {formData.nomineeData.map((nominee, index) => (
                 <div key={index}>
-                    <h5>Nominee {index + 1}</h5>
+                    <h5 className='mt-3'>Nominee {index + 1}</h5>
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId={`nominee${index}FullName`}>
-                                <Form.Label>Full Name</Form.Label>
+                                <Form.Label className='fw-500'>Full Name</Form.Label>
                                 <Form.Control type="text" name={`${index}.fullName`} value={nominee.fullName} onChange={handleChange} />
                                 {errors[`${index}.fullName`] && <span className="text-danger">{errors[`${index}.fullName`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId={`nominee${index}Relation`}>
-                                <Form.Label>Relation</Form.Label>
+                                <Form.Label className='fw-500'>Relation</Form.Label>
                                 <Form.Control type="text" name={`${index}.relation`} value={nominee.relation} onChange={handleChange} />
                                 {errors[`${index}.relation`] && <span className="text-danger">{errors[`${index}.relation`]}</span>}
                             </Form.Group>
@@ -87,14 +87,14 @@ const NomineeForm = ({ formData, setFormData, onNext, onPrevious }) => {
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId={`nominee${index}Dob`}>
-                                <Form.Label>Date of Birth</Form.Label>
+                                <Form.Label className='fw-500'>Date of Birth</Form.Label>
                                 <Form.Control type="date" name={`${index}.dob`} value={nominee.dob} onChange={handleChange} />
                                 {errors[`${index}.dob`] && <span className="text-danger">{errors[`${index}.dob`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId={`nominee${index}Gender`}>
-                                <Form.Label>Gender</Form.Label>
+                                <Form.Label className='fw-500'>Gender</Form.Label>
                                 <Form.Control as="select" name={`${index}.gender`} value={nominee.gender} onChange={handleChange}>
                                     <option>Select Gender</option>
                                     <option value="Male">Male</option>
@@ -108,14 +108,14 @@ const NomineeForm = ({ formData, setFormData, onNext, onPrevious }) => {
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId={`nominee${index}PhoneNo`}>
-                                <Form.Label>Mobile Number</Form.Label>
+                                <Form.Label className='fw-500'>Mobile Number</Form.Label>
                                 <Form.Control type="text" name={`${index}.phoneNo`} value={nominee.phoneNo} onChange={handleChange} />
                                 {errors[`${index}.phoneNo`] && <span className="text-danger">{errors[`${index}.phoneNo`]}</span>}
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId={`nominee${index}Email`}>
-                                <Form.Label>Email</Form.Label>
+                                <Form.Label className='fw-500'>Email</Form.Label>
                                 <Form.Control type="email" name={`${index}.email`} value={nominee.email} onChange={handleChange} />
                                 {errors[`${index}.email`] && <span className="text-danger">{errors[`${index}.email`]}</span>}
                             </Form.Group>

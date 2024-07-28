@@ -117,7 +117,7 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
       <Row>
         <Col md={6}>
           <Form.Group controlId="aadharCardNumber">
-            <Form.Label>Aadhar Card Number</Form.Label>
+            <Form.Label className='fw-500'>Aadhar Card Number</Form.Label>
             <Form.Control
               type="text"
               name="AadharCard.number"
@@ -129,7 +129,7 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
         </Col>
         <Col md={6}>
           <Form.Group controlId="aadharCardFile">
-            <Form.Label>Aadhar Card File</Form.Label>
+            <Form.Label className='fw-500'>Aadhar Card File</Form.Label>
             <Form.Control
               type="file"
               name="AadharCard.file"
@@ -148,14 +148,14 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
       <Row>
         <Col md={6}>
           <Form.Group controlId="panCardNumber">
-            <Form.Label>PAN Card Number</Form.Label>
+            <Form.Label className='fw-500'>PAN Card Number</Form.Label>
             <Form.Control type="text" name="PANCard.number" value={formData.documentsData.PANCard.number} onChange={handleChange} />
             {errors['PANCard.number'] && <span className="text-danger">{errors['PANCard.number']}</span>}
           </Form.Group>
         </Col>
         <Col md={6}>
           <Form.Group controlId="panCardFile">
-            <Form.Label>PAN Card File</Form.Label>
+            <Form.Label className='fw-500'>PAN Card File</Form.Label>
             <Form.Control type="file" name="PANCard.file" onChange={handleFileChange} ref={panCardFileRef} hidden />
             <div className="custom-file-upload" onClick={() => handleFileUpload(panCardFileRef)}>
               <span>{formData.documentsData.PANCard?.file?.name || "Upload Pan Card"}</span>
@@ -168,14 +168,14 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
       <Row>
         <Col md={6}>
           <Form.Group controlId="voterIdNumber">
-            <Form.Label>Voter ID Number</Form.Label>
+            <Form.Label className='fw-500'>Voter ID Number</Form.Label>
             <Form.Control type="text" name="VoterID.number" value={formData.documentsData.VoterID.number} onChange={handleChange} />
             {errors['VoterID.number'] && <span className="text-danger">{errors['VoterID.number']}</span>}
           </Form.Group>
         </Col>
         <Col md={6}>
           <Form.Group controlId="voterIdFile">
-            <Form.Label>Voter ID File</Form.Label>
+            <Form.Label className='fw-500'>Voter ID File</Form.Label>
             <Form.Control type="file" name="VoterID.file" onChange={handleFileChange} ref={voterIdFileRef} hidden />
             <div className="custom-file-upload" onClick={() => handleFileUpload(voterIdFileRef)}>
               <span>{formData.documentsData.VoterID?.file?.name || "Upload Voter ID"}</span>
@@ -188,14 +188,14 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
       <Row>
         <Col md={6}>
           <Form.Group controlId="drivingLicenseNumber">
-            <Form.Label>Driving License Number</Form.Label>
+            <Form.Label className='fw-500'>Driving License Number</Form.Label>
             <Form.Control type="text" name="DrivingLicense.number" value={formData.documentsData.DrivingLicense.number} onChange={handleChange} />
             {errors['DrivingLicense.number'] && <span className="text-danger">{errors['DrivingLicense.number']}</span>}
           </Form.Group>
         </Col>
         <Col md={6}>
           <Form.Group controlId="drivingLicenseFile">
-            <Form.Label>Driving License File</Form.Label>
+            <Form.Label className='fw-500'>Driving License File</Form.Label>
             <Form.Control type="file" name="DrivingLicense.file" onChange={handleFileChange} ref={drivingLicenseFileRef} hidden />
             <div className="custom-file-upload" onClick={() => handleFileUpload(drivingLicenseFileRef)}>
               <span>{formData.documentsData.DrivingLicense?.file?.name || "Upload Driving License"}</span>
@@ -208,14 +208,14 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
       <Row>
         <Col md={6}>
           <Form.Group controlId="passportNumber">
-            <Form.Label>Passport Number</Form.Label>
+            <Form.Label className='fw-500'>Passport Number</Form.Label>
             <Form.Control type="text" name="Passport.number" value={formData.documentsData.Passport.number} onChange={handleChange} />
             {errors['Passport.number'] && <span className="text-danger">{errors['Passport.number']}</span>}
           </Form.Group>
         </Col>
         <Col md={6}>
           <Form.Group controlId="passportFile">
-            <Form.Label>Passport File</Form.Label>
+            <Form.Label className='fw-500'>Passport File</Form.Label>
             <Form.Control type="file" name="Passport.file" onChange={handleFileChange} ref={passportFileRef} hidden />
             <div className="custom-file-upload" onClick={() => handleFileUpload(passportFileRef)}>
               <span>{formData.documentsData.Passport?.file?.name || "Upload Passport"}</span>
@@ -228,14 +228,14 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
       <Row>
         <Col md={6}>
           <Form.Group controlId="itrNumber">
-            <Form.Label>ITR Number</Form.Label>
+            <Form.Label className='fw-500'>ITR Number</Form.Label>
             <Form.Control type="text" name="ITRNo.number" value={formData.documentsData.ITRNo.number} onChange={handleChange} />
             {errors['ITRNo.number'] && <span className="text-danger">{errors['ITRNo.number']}</span>}
           </Form.Group>
         </Col>
         <Col md={6}>
           <Form.Group controlId="itrFile">
-            <Form.Label>ITR File</Form.Label>
+            <Form.Label className='fw-500'>ITR File</Form.Label>
             <Form.Control type="file" name="ITRNo.file" onChange={handleFileChange} ref={itrFileRef} hidden />
             <div className="custom-file-upload" onClick={() => handleFileUpload(itrFileRef)}>
               <span>{formData.documentsData.ITRNo?.file?.name || "Upload ITR"}</span>

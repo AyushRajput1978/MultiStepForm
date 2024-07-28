@@ -57,35 +57,35 @@ const BankDetailsForm = ({ formData, setFormData, onSubmit, onPrevious }) => {
     return (
         <Form>
             <Row>
-                <Col md={6} className='mb-3'>
+                <Col md={6}>
                     <Form.Group controlId="bankAccountNo">
                         <Form.Label className='fw-500'>Bank Account Number</Form.Label>
                         <Form.Control type="text" name="bankAccountNo" value={formData.bankDetailsData.bankAccountNo} onChange={handleChange} />
                         {errors.bankAccountNo && <span className="text-danger">{errors.bankAccountNo}</span>}
                     </Form.Group>
                 </Col>
-                <Col md={6} className='mb-3'>
+                <Col md={6}>
                     <Form.Group controlId="bankName">
                         <Form.Label  className='fw-500'>Bank Name</Form.Label>
                         <Form.Control type="text" name="bankName" value={formData.bankDetailsData.bankName} onChange={handleChange} />
                         {errors.bankName && <span className="text-danger">{errors.bankName}</span>}
                     </Form.Group>
                 </Col>
-                <Col md={6} className='mb-3'>
+                <Col md={6}>
                     <Form.Group controlId="ifscCode">
                         <Form.Label  className='fw-500'>IFSC Code</Form.Label>
                         <Form.Control type="text" name="ifscCode" value={formData.bankDetailsData.ifscCode} onChange={handleChange} />
                         {errors.ifscCode && <span className="text-danger">{errors.ifscCode}</span>}
                     </Form.Group>
                 </Col>
-                <Col md={6} className='mb-3'>
+                <Col md={6}>
                     <Form.Group controlId="branchName">
                         <Form.Label  className='fw-500'>Branch Name</Form.Label>
                         <Form.Control type="text" name="branchName" value={formData.bankDetailsData.branchName} onChange={handleChange} />
                         {errors.branchName && <span className="text-danger">{errors.branchName}</span>}
                     </Form.Group>
                 </Col>
-                <Col md={6} className='mb-3'>
+                <Col md={6}>
                     <Form.Group controlId="accountHolderName">
                         <Form.Label className='fw-500'>Account Holder Name</Form.Label>
                         <Form.Control type="text" name="accountHolderName" value={formData.bankDetailsData.accountHolderName} onChange={handleChange} />

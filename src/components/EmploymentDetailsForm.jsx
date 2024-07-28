@@ -99,7 +99,7 @@ const EmploymentDetailsForm = ({ formData, setFormData, onNext, onPrevious }) =>
             <Row>
                 <Col md={6}>
                     <Form.Group controlId="type">
-                        <Form.Label>Type</Form.Label>
+                        <Form.Label className='fw-500'>Type</Form.Label>
                         <Form.Control as="select" name="type" value={formData.employmentStatusData.type} onChange={handleChange}>
                             <option>Select Type</option>
                             <option value="Private">Private</option>
@@ -110,7 +110,7 @@ const EmploymentDetailsForm = ({ formData, setFormData, onNext, onPrevious }) =>
                 </Col>
                 <Col md={6}>
                     <Form.Group controlId="organizationName">
-                        <Form.Label>Organization Name</Form.Label>
+                        <Form.Label className='fw-500'>Organization Name</Form.Label>
                         <Form.Control type="text" name="organizationName" value={formData.employmentStatusData.organizationName} onChange={handleChange} />
                         {errors.organizationName && <span className="text-danger">{errors.organizationName}</span>}
                     </Form.Group>
@@ -119,14 +119,14 @@ const EmploymentDetailsForm = ({ formData, setFormData, onNext, onPrevious }) =>
             <Row>
                 <Col md={6}>
                     <Form.Group controlId="jobTitle">
-                        <Form.Label>Job Title</Form.Label>
+                        <Form.Label className='fw-500'>Job Title</Form.Label>
                         <Form.Control type="text" name="jobTitle" value={formData.employmentStatusData.jobTitle} onChange={handleChange} />
                         {errors.jobTitle && <span className="text-danger">{errors.jobTitle}</span>}
                     </Form.Group>
                 </Col>
                 <Col md={6}>
                     <Form.Group controlId="designation">
-                        <Form.Label>Designation</Form.Label>
+                        <Form.Label className='fw-500'>Designation</Form.Label>
                         <Form.Control type="text" name="designation" value={formData.employmentStatusData.designation} onChange={handleChange} />
                         {errors.designation && <span className="text-danger">{errors.designation}</span>}
                     </Form.Group>
@@ -135,14 +135,14 @@ const EmploymentDetailsForm = ({ formData, setFormData, onNext, onPrevious }) =>
             <Row>
                 <Col md={6}>
                     <Form.Group controlId="joiningDate">
-                        <Form.Label>Joining Date</Form.Label>
+                        <Form.Label className='fw-500'>Joining Date</Form.Label>
                         <Form.Control type="date" name="joiningDate" value={formData.employmentStatusData.joiningDate} onChange={handleChange} />
                         {errors.joiningDate && <span className="text-danger">{errors.joiningDate}</span>}
                     </Form.Group>
                 </Col>
                 <Col md={6}>
                     <Form.Group controlId="currentOrLastAnnualSalary">
-                        <Form.Label>Current/Last Annual Salary</Form.Label>
+                        <Form.Label className='fw-500'>Current/Last Annual Salary</Form.Label>
                         <Form.Control type="number" name="currentOrLastAnnualSalary" value={formData.employmentStatusData.currentOrLastAnnualSalary} onChange={handleChange} />
                         {errors.currentOrLastAnnualSalary && <span className="text-danger">{errors.currentOrLastAnnualSalary}</span>}
                     </Form.Group>
@@ -151,7 +151,7 @@ const EmploymentDetailsForm = ({ formData, setFormData, onNext, onPrevious }) =>
             <Row>
                 <Col md={6}>
                     <Form.Group controlId="salarySlip">
-                        <Form.Label>Salary Slip</Form.Label>
+                        <Form.Label className='fw-500'>Salary Slip</Form.Label>
                         <Form.Control type="file" name="salarySlip" onChange={handleFileChange} ref={salarySlipFileRef} hidden />
                         <div className="custom-file-upload" onClick={() => handleFileUpload(salarySlipFileRef)}>
                             <span>{formData.employmentStatusData.salarySlip?.name || "Upload Salary Slip"}</span>
