@@ -136,7 +136,6 @@ const App = () => {
   };
 
   const handleSubmit = () => {
-    console.log(formData, "form ka data");
     ApiService.registerCustomer(formData)
       .then((response) => {
         console.log("Registration successful:", response.data);
@@ -145,7 +144,6 @@ const App = () => {
         console.error("Error registering customer:", error);
       });
   };
-  console.log(image, "image");
   return (
     <Container>
       <MultiStepProgressBar currentStep={step} setCurrentStep={setStep} />
