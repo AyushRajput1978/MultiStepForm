@@ -50,17 +50,6 @@ const DocumentsForm = ({ formData, setFormData, onNext, onPrevious }) => {
     const [docType, field] = name.split(".");
     const file = files[0];
 
-    console.log(
-      files,
-      "files",
-      name,
-      "name",
-      docType,
-      "doctype",
-      field,
-      "field"
-    );
-
     if (!file) {
       setErrors({
         ...errors,

@@ -27,7 +27,6 @@ const PersonalDetailsForm = ({
       });
     }
   }, [image]);
-  console.log(formData, "Form ka data", image);
   const handleChange = (e) => {
     const { name, value } = e.target;
     let formattedValue = value;
