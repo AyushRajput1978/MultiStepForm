@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import "react-image-crop/dist/ReactCrop.css";
 import { useDropzone } from "react-dropzone";
 import { Button, Image } from "react-bootstrap";
-import dummyImage from "../Image/user-dummy.png"
+import dummyImage from "../Image/user-dummy.png";
 
 const ImageUploader = ({ img, setImg }) => {
   const [image, setImage] = useState(null);
@@ -40,25 +40,26 @@ const ImageUploader = ({ img, setImg }) => {
   });
   return (
     <div
-      className="border border-success rounded"
+      className="rounded"
       {...getRootProps()}
       style={{
         marginBottom: "16px",
-        border: "1px dashed #ccc",
+        border: "2px dashed #4570b0",
         padding: "16px",
         textAlign: "center",
         width: "10em",
         height: "10em",
+        // border: "#4570b0",
       }}
     >
       <input {...getInputProps()} />
-      
-        <Image
-          src={image||dummyImage}
-          alt="Profile Image"
-          style={{ width: "100%", height: "100%" }}
-        />
-      
+
+      <Image
+        src={image || dummyImage}
+        alt="Profile Image"
+        style={{ width: "100%", height: "100%" }}
+      />
+
       {image && (
         <Button className="my-4 green-btn fontweigh-500">Change</Button>
       )}

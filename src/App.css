@@ -5,3 +5,7 @@
 .fw-500{
     font-weight: 500;
 }
+
+.form-label{
+    margin-bottom: 0!important;
+}

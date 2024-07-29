@@ -4,7 +4,7 @@ import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import { Button, Container } from "react-bootstrap";
 
-const MultiStepProgressBar = ({ currentStep,setCurrentStep }) => {
+const MultiStepProgressBar = ({ currentStep, setCurrentStep }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -38,20 +38,21 @@ const MultiStepProgressBar = ({ currentStep,setCurrentStep }) => {
     "Employment Details",
     "References",
     "Nominee",
-    "Bank Details"
+    "Bank Details",
   ];
-const handleProgress=(index)=>{
-  if(currentStep>index){
-    setCurrentStep(index+1)
-  }
-}
+  const handleProgress = (index) => {
+    if (currentStep > index) {
+      setCurrentStep(index + 1);
+    }
+  };
   return (
     <Container fluid className="my-5 mx-2">
       <ProgressBar percent={stepPercentage}>
         {steps.map((step, index) => (
           <Step key={index}>
             {({ accomplished }) => (
-              <Button onClick={()=>handleProgress(index)}
+              <Button
+                onClick={() => handleProgress(index)}
                 className={`indexedStep ${
                   accomplished ? "accomplished" : null
                 } fw-bold`}
